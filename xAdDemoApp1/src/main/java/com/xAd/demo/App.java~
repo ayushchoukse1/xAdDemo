@@ -89,6 +89,37 @@ public class App {
 		executor.shutdown();
 
 	}
+
+	// private static void updateLog4jConfiguration(String string) throws
+	// SecurityException, IOException {
+
+	//// Properties props = new Properties();
+	//// try {
+	//// InputStream configStream = App.class.getResourceAsStream(
+	//// "/log4j.properties");
+	//// props.load(configStream);
+	//// configStream.close();
+	//// } catch (IOException e) {
+	//// System.out.println("Errornot laod configuration file ");
+	//// }
+	//// props.setProperty("log4j.appender.FILE.file", string);
+	//// LogManager.getLogManager().readConfiguration();
+	////
+	// LoggerContext logCtx = (LoggerContext) LoggerFactory.getILoggerFactory();
+	//
+	// PatternLayoutEncoder logEncoder = new PatternLayoutEncoder();
+	// logEncoder.setContext(logCtx);
+	// logEncoder.setPattern("%d{ISO8601} %-5p %m%n");
+	// logEncoder.start();
+	// RollingFileAppender logFileAppender = new RollingFileAppender();
+	// logFileAppender.setContext(logCtx);
+	// logFileAppender.setName("logFile");
+	// logFileAppender.setEncoder(logEncoder);
+	// logFileAppender.setAppend(false);
+	// logFileAppender.setFile(string+"etl.log");
+	// Logger log = logCtx.getLogger(App.class);
+	//
+	// log.addAppender(logFileAppender);
 	private static void updateLogFile(String log) {
 		Properties props = new Properties();
 		try {
